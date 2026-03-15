@@ -1,2 +1,12 @@
 /* For information on how to create your own theme, please refer to:
 http://ionicframework.com/docs/theming/ */
+.login-background {
+  --background: linear-gradient(135deg, #4f46e5, #06b6d4);
+}
+
+ion-content {
+  --background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+
