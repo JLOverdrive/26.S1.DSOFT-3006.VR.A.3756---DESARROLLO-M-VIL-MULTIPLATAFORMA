@@ -13,9 +13,19 @@
 
             <ion-button @click="getLocation">Get Location</ion-button>
             <div v-if="location">
-                <p>Lat: {{ location.latitude }}</p>
-                <p>Lng: {{ location.longitude }}</p>
-            </div>
+<p>Lat: {{ location.latitude }}</p>
+<p>Lng: {{ location.longitude }}</p>
+
+<iframe
+width="100%"
+height="300"
+style="border:0"
+loading="lazy"
+allowfullscreen
+:src="'https://maps.google.com/maps?q=' + location.latitude + ',' + location.longitude + '&z=15&output=embed'">
+</iframe>
+
+</div>
 
         </ion-content>
     </ion-page>
@@ -46,5 +56,6 @@ const getLocation = async () => {
   const coordinates = await Geolocation.getCurrentPosition();
   location.value = coordinates.coords;
 };
+
 
 </script>
